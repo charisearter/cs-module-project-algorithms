@@ -17,6 +17,7 @@ def product_of_all_other_numbers(arr):
     # make final array
     # multiply the other 2 arrays together and appen it to final
     # return final
+    pass
 
 
 if __name__ == '__main__':
