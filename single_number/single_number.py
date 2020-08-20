@@ -13,6 +13,7 @@ def single_number(arr):
     # traverse the dictionary (maybe if statment)
     # check for the element that has the value of 1
     # return that element
+    #-----------------------------
     # if built in figure out how to manipulate the method to only return the number that appears once
     for num in arr:
         if arr.count(num) == 1:
