@@ -16,8 +16,22 @@ def product_of_all_other_numbers(arr):
     # store in a different array
     # make final array
     # multiply the other 2 arrays together and appen it to final
-    # return final
-    pass
+    # return final  --> linear O(n)
+
+    left = [1] * len(arr)  # multiply all numbers forwards
+    right = [1] * len(arr)  # mulitply all numbers going backwards
+    final = []  # mulitply left and right with each other
+
+    for i in range(1, len(arr)):  # range will go thru length of array, starting at 1
+        left[i] = (left[i - 1] * arr[i-1])
+    for j in range(len(arr) - 2, -1, -1):  # start at end, countdown to 0, decrement by 1
+
+        right[j] = (right[j+1] * arr[j+1])
+    print('left: ', left)
+    print('right: ', right)
+    for k in range(len(left)):
+        final.append(left[k] * right[k])
+    return final
 
 
 if __name__ == '__main__':
